@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Determinant Solver</string>
+    <string name="top_label_name">Determinant Solver</string>
+    <string name="submit_text">Submit</string>
+    <string name="reset_text">Reset</string>
+    <string name="field_a1_hint">A1</string>
+    <string name="field_a2_hint">A2</string>
+    <string name="field_a3_hint">A3</string>
+    <string name="field_b1_hint">B1</string>
+    <string name="field_b2_hint">B2</string>
+    <string name="field_b3_hint">B3</string>
+    <string name="field_c1_hint">C1</string>
+    <string name="field_c2_hint">C2</string>
+    <string name="field_c3_hint">C3</string>
+    <string name="field_answer_hint">Answer</string>
+    <string name="invalid_input_text">Enter Valid Input!</string>
+</resources>
