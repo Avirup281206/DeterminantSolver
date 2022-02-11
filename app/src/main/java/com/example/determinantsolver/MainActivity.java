@@ -38,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
         field_c3 = findViewById(R.id.text_c3);
         field_answer = findViewById(R.id.text_answer);
         text_solution = findViewById(R.id.text_solution);
+
+        text_solution.setText("""
+                Determinant Solver v0.1-beta
+                Author: Avirup Banerjee
+                Version: 0.1-beta
+                
+                This is a Determinant Solver made by me. Hope you like it""");
     }
 
     public void solve(View view){
