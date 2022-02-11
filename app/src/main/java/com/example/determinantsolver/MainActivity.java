@@ -40,9 +40,9 @@ public class MainActivity extends AppCompatActivity {
         text_solution = findViewById(R.id.text_solution);
 
         text_solution.setText("""
-                Determinant Solver v0.1-beta
+                Determinant Solver v0.1
                 Author: Avirup Banerjee
-                Version: 0.1-beta
+                Version: 0.1
                 
                 This is a Determinant Solver made by me. Hope you like it""");
     }
