@@ -5,217 +5,229 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp"
         android:fillViewport="true"
+        android:scrollbars="none"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         tools:context=".MainActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
                     android:text="@string/top_label_name"
                     android:textAlignment="center"
                     android:textSize="34sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <View
-                    android:id="@+id/view2"
-                    android:layout_width="2dp"
-                    android:layout_height="200dp"
-                    android:layout_marginTop="75dp"
-                    android:layout_marginEnd="79dp"
-                    android:background="#000000"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-                <View
-                    android:id="@+id/view"
-                    android:layout_width="2dp"
-                    android:layout_height="200dp"
-                    android:layout_marginStart="79dp"
-                    android:layout_marginTop="75dp"
-                    android:background="#000000"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-                <EditText
-                    android:id="@+id/text_a1"
-                    android:layout_width="62dp"
-                    android:layout_height="42dp"
-                    android:layout_marginTop="80dp"
-                    android:ems="10"
-                    android:hint="@string/field_a1_hint"
-                    android:importantForAutofill="no"
-                    android:inputType="textPersonName"
-                    android:textAlignment="center"
-                    app:layout_constraintEnd_toStartOf="@+id/text_a2"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/view"
-                    app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-                <EditText
-                    android:id="@+id/text_a2"
-                    android:layout_width="62dp"
-                    android:layout_height="42dp"
-                    android:ems="10"
-                    android:hint="@string/field_a2_hint"
-                    android:importantForAutofill="no"
-                    android:inputType="textPersonName"
-                    android:textAlignment="center"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/text_a1"
-                    app:layout_constraintEnd_toStartOf="@+id/text_a3"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/text_a1" />
-
-                <EditText
-                    android:id="@+id/text_a3"
-                    android:layout_width="62dp"
-                    android:layout_height="42dp"
-                    android:ems="10"
-                    android:hint="@string/field_a3_hint"
-                    android:importantForAutofill="no"
-                    android:inputType="textPersonName"
-                    android:textAlignment="center"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/text_a2"
-                    app:layout_constraintEnd_toStartOf="@+id/view2"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/text_a2" />
-
-                <EditText
-                    android:id="@+id/text_b1"
-                    android:layout_width="62dp"
-                    android:layout_height="42dp"
-                    android:layout_marginTop="10dp"
-                    android:ems="10"
-                    android:hint="@string/field_b1_hint"
-                    android:importantForAutofill="no"
-                    android:inputType="textPersonName"
-                    android:textAlignment="center"
-                    app:layout_constraintEnd_toStartOf="@+id/text_b2"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/view"
-                    app:layout_constraintTop_toBottomOf="@+id/text_a1" />
-
-                <EditText
-                    android:id="@+id/text_b2"
-                    android:layout_width="62dp"
-                    android:layout_height="42dp"
-                    android:ems="10"
-                    android:hint="@string/field_b2_hint"
-                    android:importantForAutofill="no"
-                    android:inputType="textPersonName"
-                    android:textAlignment="center"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/text_b1"
-                    app:layout_constraintEnd_toStartOf="@+id/text_b3"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/text_b1" />
-
-                <EditText
-                    android:id="@+id/text_b3"
-                    android:layout_width="62dp"
-                    android:layout_height="42dp"
-                    android:ems="10"
-                    android:hint="@string/field_b3_hint"
-                    android:importantForAutofill="no"
-                    android:inputType="textPersonName"
-                    android:textAlignment="center"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/text_b2"
-                    app:layout_constraintEnd_toStartOf="@+id/view2"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/text_b2" />
-
-                <EditText
-                    android:id="@+id/text_c1"
-                    android:layout_width="62dp"
-                    android:layout_height="42dp"
-                    android:layout_marginTop="10dp"
-                    android:ems="10"
-                    android:hint="@string/field_c1_hint"
-                    android:importantForAutofill="no"
-                    android:inputType="textPersonName"
-                    android:textAlignment="center"
-                    app:layout_constraintEnd_toStartOf="@+id/text_c2"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/view"
-                    app:layout_constraintTop_toBottomOf="@+id/text_b1" />
-
-                <EditText
-                    android:id="@+id/text_c2"
-                    android:layout_width="62dp"
-                    android:layout_height="42dp"
-                    android:ems="10"
-                    android:hint="@string/field_c2_hint"
-                    android:importantForAutofill="no"
-                    android:inputType="textPersonName"
-                    android:textAlignment="center"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/text_c1"
-                    app:layout_constraintEnd_toStartOf="@+id/text_c3"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/text_c1" />
-
-                <EditText
-                    android:id="@+id/text_c3"
-                    android:layout_width="62dp"
-                    android:layout_height="42dp"
-                    android:ems="10"
-                    android:hint="@string/field_c3_hint"
-                    android:importantForAutofill="no"
-                    android:inputType="textPersonName"
-                    android:textAlignment="center"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/text_c2"
-                    app:layout_constraintEnd_toStartOf="@+id/view2"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/text_c2" />
-
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="98dp"
-                    android:layout_height="52dp"
-                    android:layout_marginTop="17dp"
-                    android:onClick="solve"
-                    android:text="@string/submit_text"
-                    app:layout_constraintEnd_toStartOf="@+id/button2"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/view"
-                    app:layout_constraintTop_toBottomOf="@+id/text_c1" />
-
-                <Button
-                    android:id="@+id/button2"
-                    android:layout_width="98dp"
-                    android:layout_height="52dp"
-                    android:onClick="reset"
-                    android:text="@string/reset_text"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/button"
-                    app:layout_constraintEnd_toStartOf="@+id/view2"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/button" />
-
-                <EditText
-                    android:id="@+id/text_answer"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="100dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="100dp"
-                    android:clickable="false"
-                    android:editable="false"
-                    android:ems="10"
-                    android:focusableInTouchMode="true"
-                    android:hint="@string/field_answer_hint"
-                    android:importantForAutofill="no"
-                    android:textAlignment="center"
-                    android:textStyle="bold"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="308dp"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="60dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/button" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_width="2dp"
+                            android:layout_height="200dp"
+                            android:layout_marginTop="19dp"
+                            android:layout_marginEnd="25dp"
+                            android:background="#000000"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="2dp"
+                            android:layout_height="200dp"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginTop="19dp"
+                            android:background="#000000"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/text_a1"
+                            android:layout_width="62dp"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="28dp"
+                            android:ems="10"
+                            android:hint="@string/field_a1_hint"
+                            android:importantForAutofill="no"
+                            android:inputType="textPersonName"
+                            android:textAlignment="center"
+                            app:layout_constraintEnd_toStartOf="@+id/text_a2"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/view"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/text_a2"
+                            android:layout_width="62dp"
+                            android:layout_height="42dp"
+                            android:ems="10"
+                            android:hint="@string/field_a2_hint"
+                            android:importantForAutofill="no"
+                            android:inputType="textPersonName"
+                            android:textAlignment="center"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/text_a1"
+                            app:layout_constraintEnd_toStartOf="@+id/text_a3"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/text_a1" />
+
+                        <EditText
+                            android:id="@+id/text_a3"
+                            android:layout_width="62dp"
+                            android:layout_height="42dp"
+                            android:ems="10"
+                            android:hint="@string/field_a3_hint"
+                            android:importantForAutofill="no"
+                            android:inputType="textPersonName"
+                            android:textAlignment="center"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/text_a2"
+                            app:layout_constraintEnd_toStartOf="@+id/view2"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/text_a2" />
+
+                        <EditText
+                            android:id="@+id/text_b1"
+                            android:layout_width="62dp"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="15dp"
+                            android:ems="10"
+                            android:hint="@string/field_b1_hint"
+                            android:importantForAutofill="no"
+                            android:inputType="textPersonName"
+                            android:textAlignment="center"
+                            app:layout_constraintEnd_toStartOf="@+id/text_b2"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/view"
+                            app:layout_constraintTop_toBottomOf="@+id/text_a1" />
+
+                        <EditText
+                            android:id="@+id/text_b2"
+                            android:layout_width="62dp"
+                            android:layout_height="42dp"
+                            android:ems="10"
+                            android:hint="@string/field_b2_hint"
+                            android:importantForAutofill="no"
+                            android:inputType="textPersonName"
+                            android:textAlignment="center"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/text_b1"
+                            app:layout_constraintEnd_toStartOf="@+id/text_b3"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/text_b1" />
+
+                        <EditText
+                            android:id="@+id/text_b3"
+                            android:layout_width="62dp"
+                            android:layout_height="42dp"
+                            android:ems="10"
+                            android:hint="@string/field_b3_hint"
+                            android:importantForAutofill="no"
+                            android:inputType="textPersonName"
+                            android:textAlignment="center"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/text_b2"
+                            app:layout_constraintEnd_toStartOf="@+id/view2"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/text_b2" />
+
+                        <EditText
+                            android:id="@+id/text_c1"
+                            android:layout_width="62dp"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="15dp"
+                            android:ems="10"
+                            android:hint="@string/field_c1_hint"
+                            android:importantForAutofill="no"
+                            android:inputType="textPersonName"
+                            android:textAlignment="center"
+                            app:layout_constraintEnd_toStartOf="@+id/text_c2"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/view"
+                            app:layout_constraintTop_toBottomOf="@+id/text_b1" />
+
+                        <EditText
+                            android:id="@+id/text_c2"
+                            android:layout_width="62dp"
+                            android:layout_height="42dp"
+                            android:ems="10"
+                            android:hint="@string/field_c2_hint"
+                            android:importantForAutofill="no"
+                            android:inputType="textPersonName"
+                            android:textAlignment="center"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/text_c1"
+                            app:layout_constraintEnd_toStartOf="@+id/text_c3"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/text_c1" />
+
+                        <EditText
+                            android:id="@+id/text_c3"
+                            android:layout_width="62dp"
+                            android:layout_height="42dp"
+                            android:ems="10"
+                            android:hint="@string/field_c3_hint"
+                            android:importantForAutofill="no"
+                            android:inputType="textPersonName"
+                            android:textAlignment="center"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/text_c2"
+                            app:layout_constraintEnd_toStartOf="@+id/view2"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/text_c2" />
+
+                        <Button
+                            android:id="@+id/button"
+                            android:layout_width="98dp"
+                            android:layout_height="52dp"
+                            android:layout_marginTop="10dp"
+                            android:onClick="solve"
+                            android:text="@string/submit_text"
+                            app:layout_constraintEnd_toStartOf="@+id/button2"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/view"
+                            app:layout_constraintTop_toBottomOf="@+id/text_c1" />
+
+                        <Button
+                            android:id="@+id/button2"
+                            android:layout_width="98dp"
+                            android:layout_height="52dp"
+                            android:onClick="reset"
+                            android:text="@string/reset_text"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/button"
+                            app:layout_constraintEnd_toStartOf="@+id/view2"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/button" />
+
+                        <EditText
+                            android:id="@+id/text_answer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:clickable="false"
+                            android:editable="false"
+                            android:ems="10"
+                            android:focusableInTouchMode="true"
+                            android:hint="@string/field_answer_hint"
+                            android:importantForAutofill="no"
+                            android:textAlignment="center"
+                            android:textStyle="bold"
+                            android:isScrollContainer="true"
+                            app:layout_constraintEnd_toStartOf="@+id/view2"
+                            app:layout_constraintStart_toEndOf="@+id/view"
+                            app:layout_constraintTop_toBottomOf="@+id/button" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
                     android:id="@+id/text_numberFormatException"
@@ -228,25 +240,28 @@
                     android:textSize="16sp"
                     android:visibility="invisible"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/text_answer" />
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
                 <ScrollView
                     android:layout_width="match_parent"
                     android:layout_height="148dp"
                     android:layout_marginTop="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/text_answer">
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
-                    <TextView
-                        android:id="@+id/text_solution"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:textSize="16sp"
-                        android:textStyle="italic" />
+                        <TextView
+                            android:id="@+id/text_solution"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="italic" />
                 </ScrollView>
-            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>

@@ -1,7 +1,5 @@
 package com.example.determinantsolver;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -9,9 +7,14 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
+
+    private EditText field_a1, field_a2, field_a3, field_b1, field_b2, field_b3, field_c1, field_c2, field_c3, field_answer;
+    private TextView text_solution;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,20 +27,22 @@ public class MainActivity extends AppCompatActivity {
         metrics.scaledDensity = configuration.fontScale * metrics.density;
         getBaseContext().getResources().updateConfiguration(configuration, metrics);
         setContentView(R.layout.activity_main);
+        field_a1 = findViewById(R.id.text_a1);
+        field_a2 = findViewById(R.id.text_a2);
+        field_a3 = findViewById(R.id.text_a3);
+        field_b1 = findViewById(R.id.text_b1);
+        field_b2 = findViewById(R.id.text_b2);
+        field_b3 = findViewById(R.id.text_b3);
+        field_c1 = findViewById(R.id.text_c1);
+        field_c2 = findViewById(R.id.text_c2);
+        field_c3 = findViewById(R.id.text_c3);
+        field_answer = findViewById(R.id.text_answer);
+        text_solution = findViewById(R.id.text_solution);
     }
 
     public void solve(View view){
         TextView label_numberFormatException = findViewById(R.id.text_numberFormatException);
         try {
-            EditText field_a1 = findViewById(R.id.text_a1),
-                    field_a2 = findViewById(R.id.text_a2),
-                    field_a3 = findViewById(R.id.text_a3),
-                    field_b1 = findViewById(R.id.text_b1),
-                    field_b2 = findViewById(R.id.text_b2),
-                    field_b3 = findViewById(R.id.text_b3),
-                    field_c1 = findViewById(R.id.text_c1),
-                    field_c2 = findViewById(R.id.text_c2),
-                    field_c3 = findViewById(R.id.text_c3);
             if (Objects.equals(field_a1.getText().toString(), "") || Objects.equals(field_a2.getText().toString(), "") || Objects.equals(field_a3.getText().toString(), "") || Objects.equals(field_b1.getText().toString(), "") || Objects.equals(field_b2.getText().toString(), "") || Objects.equals(field_b3.getText().toString(), "") || Objects.equals(field_c1.getText().toString(), "") || Objects.equals(field_c2.getText().toString(), "") || Objects.equals(field_c3.getText().toString(), ""))
                 return;
             double field_a1_value = Double.parseDouble(field_a1.getText().toString()),
@@ -57,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
 
             String result_string = String.valueOf(Double.valueOf(result));
 
-            EditText field_answer = findViewById(R.id.text_answer);
             field_answer.setText(result_string);
 
             String solution = """
@@ -74,25 +78,15 @@ public class MainActivity extends AppCompatActivity {
                     .replace("$field_c1_value", String.valueOf(field_c1_value))
                     .replace("$field_c2_value", String.valueOf(field_c2_value))
                     .replace("$field_c3_value", String.valueOf(field_c3_value));
-            ((TextView)findViewById(R.id.text_solution)).setText(solution);
+            text_solution.setText(solution);
             label_numberFormatException.setVisibility(View.INVISIBLE);
-        }catch(NumberFormatException e){
-            ((TextView)findViewById(R.id.text_solution)).setText("");
+        }catch(Exception e){
+            text_solution.setText("");
             label_numberFormatException.setVisibility(View.VISIBLE);
         }
     }
 
     public void reset(View view){
-        EditText field_a1 = findViewById(R.id.text_a1),
-                field_a2 = findViewById(R.id.text_a2),
-                field_a3 = findViewById(R.id.text_a3),
-                field_b1 = findViewById(R.id.text_b1),
-                field_b2 = findViewById(R.id.text_b2),
-                field_b3 = findViewById(R.id.text_b3),
-                field_c1 = findViewById(R.id.text_c1),
-                field_c2 = findViewById(R.id.text_c2),
-                field_c3 = findViewById(R.id.text_c3),
-                field_answer = findViewById(R.id.text_answer);
         field_a1.setText("");
         field_a2.setText("");
         field_a3.setText("");
@@ -103,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         field_c2.setText("");
         field_c3.setText("");
         field_answer.setText("");
+        text_solution.setText("");
         findViewById(R.id.text_numberFormatException).setVisibility(View.INVISIBLE);
-        ((TextView)findViewById(R.id.text_solution)).setText("");
     }
 }
