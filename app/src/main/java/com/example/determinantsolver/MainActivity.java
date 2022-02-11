@@ -89,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
             label_numberFormatException.setVisibility(View.INVISIBLE);
         }catch(Exception e){
             text_solution.setText("");
+            field_answer.setText("");
             label_numberFormatException.setVisibility(View.VISIBLE);
         }
     }
