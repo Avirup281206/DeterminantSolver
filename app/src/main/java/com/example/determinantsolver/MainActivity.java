@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         reset_button.setOnClickListener(this::reset);
     }
 
-    public void solve(View view){
+    private void solve(@NotNull View view){
         TextView label_numberFormatException = findViewById(R.id.text_numberFormatException);
         try {
             if (Objects.equals(field_a1.getText().toString(), "") || Objects.equals(field_a2.getText().toString(), "") || Objects.equals(field_a3.getText().toString(), "") || Objects.equals(field_b1.getText().toString(), "") || Objects.equals(field_b2.getText().toString(), "") || Objects.equals(field_b3.getText().toString(), "") || Objects.equals(field_c1.getText().toString(), "") || Objects.equals(field_c2.getText().toString(), "") || Objects.equals(field_c3.getText().toString(), ""))
@@ -83,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void reset(View view){
+    private void reset(@NotNull View view){
         field_a1.setText("");
         field_a2.setText("");
         field_a3.setText("");
