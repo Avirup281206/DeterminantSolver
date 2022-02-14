@@ -4,6 +4,7 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText field_a1, field_a2, field_a3, field_b1, field_b2, field_b3, field_c1, field_c2, field_c3, field_answer;
     private TextView text_solution;
+    private Button submit_button, reset_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,17 +29,11 @@ public class MainActivity extends AppCompatActivity {
         metrics.scaledDensity = configuration.fontScale * metrics.density;
         getBaseContext().getResources().updateConfiguration(configuration, metrics);
         setContentView(R.layout.activity_main);
-        field_a1 = findViewById(R.id.text_a1);
-        field_a2 = findViewById(R.id.text_a2);
-        field_a3 = findViewById(R.id.text_a3);
-        field_b1 = findViewById(R.id.text_b1);
-        field_b2 = findViewById(R.id.text_b2);
-        field_b3 = findViewById(R.id.text_b3);
-        field_c1 = findViewById(R.id.text_c1);
-        field_c2 = findViewById(R.id.text_c2);
-        field_c3 = findViewById(R.id.text_c3);
-        field_answer = findViewById(R.id.text_answer);
-        text_solution = findViewById(R.id.text_solution);
+
+        initializeVariable();
+
+        submit_button.setOnClickListener(this::solve);
+        reset_button.setOnClickListener(this::reset);
     }
 
     public void solve(View view){
@@ -100,5 +96,21 @@ public class MainActivity extends AppCompatActivity {
         field_answer.setText("");
         text_solution.setText("");
         findViewById(R.id.text_numberFormatException).setVisibility(View.INVISIBLE);
+    }
+
+    private void initializeVariable(){
+        field_a1 = findViewById(R.id.text_a1);
+        field_a2 = findViewById(R.id.text_a2);
+        field_a3 = findViewById(R.id.text_a3);
+        field_b1 = findViewById(R.id.text_b1);
+        field_b2 = findViewById(R.id.text_b2);
+        field_b3 = findViewById(R.id.text_b3);
+        field_c1 = findViewById(R.id.text_c1);
+        field_c2 = findViewById(R.id.text_c2);
+        field_c3 = findViewById(R.id.text_c3);
+        field_answer = findViewById(R.id.text_answer);
+        text_solution = findViewById(R.id.text_solution);
+        submit_button = findViewById(R.id.submit_button);
+        reset_button = findViewById(R.id.reset_button);
     }
 }
