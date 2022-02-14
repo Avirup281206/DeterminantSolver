@@ -18,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText field_a1, field_a2, field_a3, field_b1, field_b2, field_b3, field_c1, field_c2, field_c3, field_answer;
     private TextView text_solution;
-    private Button submit_button, reset_button;
+    private Button submit_button;
+    private Button reset_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
