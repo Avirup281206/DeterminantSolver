@@ -270,7 +270,6 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:clickable="false"
-                            android:editable="false"
                             android:ems="10"
                             android:focusable="false"
                             android:hint="@string/field_answer_hint"
@@ -280,7 +279,8 @@
                             android:textStyle="bold"
                             app:layout_constraintEnd_toStartOf="@+id/view2"
                             app:layout_constraintStart_toEndOf="@+id/view"
-                            app:layout_constraintTop_toBottomOf="@+id/submit_button" />
+                            app:layout_constraintTop_toBottomOf="@+id/submit_button"
+                            android:inputType="" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
