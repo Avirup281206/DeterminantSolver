@@ -14,4 +14,9 @@
     <string name="field_c3_hint">C3</string>
     <string name="field_answer_hint">Answer</string>
     <string name="invalid_input_text">Enter Valid Input!</string>
+    <string name="info">Determinant Solver v0.1\n
+        Author: Avirup Banerjee\n
+        Version: 0.1\n
+        This is a Determinant Solver made by me. Hope you like it</string>
+
 </resources>
