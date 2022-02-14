@@ -16,7 +16,7 @@
     <string name="invalid_input_text">Enter Valid Input!</string>
     <string name="info">Determinant Solver v0.1\n
         Author: Avirup Banerjee\n
-        Version: 0.1\n
+        Version: 0.1\n\n
         This is a Determinant Solver made by me. Hope you like it</string>
 
 </resources>
