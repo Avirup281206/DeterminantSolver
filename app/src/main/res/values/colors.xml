@@ -10,4 +10,5 @@
     <color name="red">#FF0000</color>
     <color name="grey">#808080</color>
     <color name="metallic_grey">#8E8E8E</color>
+    <color name="gainsboro">#DCDCDC</color>
 </resources>
