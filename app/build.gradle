@@ -7,8 +7,8 @@ android {
 
     defaultConfig {
         applicationId "com.example.determinantsolver"
-        minSdk 21
-        targetSdk 32
+        minSdk 15
+        targetSdk 21
         versionCode 1
         versionName "0.1"
 
