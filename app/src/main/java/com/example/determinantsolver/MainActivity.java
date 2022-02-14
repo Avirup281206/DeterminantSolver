@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Configuration configuration = getResources().getConfiguration();
-        configuration.fontScale=(float) 1; //0.85 small size, 1 normal size, 1.15 big etc
+        configuration.fontScale=(float) 1;
 
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
