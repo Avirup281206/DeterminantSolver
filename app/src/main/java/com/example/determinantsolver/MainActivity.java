@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import net.objecthunter.exp4j.Expression;
+import net.objecthunter.exp4j.ExpressionBuilder;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
@@ -17,7 +20,7 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
 
     private EditText field_a1, field_a2, field_a3, field_b1, field_b2, field_b3, field_c1, field_c2, field_c3, field_answer;
-    private TextView text_solution;
+    private TextView text_solution, label_numberFormatException;
     private Button submit_button;
     private Button reset_button;
 
@@ -25,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Configuration configuration = getResources().getConfiguration();
-        configuration.fontScale=(float) 1;
+        configuration.fontScale = (float) 1;
 
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
@@ -40,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void solve(@NotNull View view){
-        TextView label_numberFormatException = findViewById(R.id.text_numberFormatException);
         try {
             if (Objects.equals(field_a1.getText().toString(), "") || Objects.equals(field_a2.getText().toString(), "") || Objects.equals(field_a3.getText().toString(), "") || Objects.equals(field_b1.getText().toString(), "") || Objects.equals(field_b2.getText().toString(), "") || Objects.equals(field_b3.getText().toString(), "") || Objects.equals(field_c1.getText().toString(), "") || Objects.equals(field_c2.getText().toString(), "") || Objects.equals(field_c3.getText().toString(), ""))
                 return;
@@ -79,10 +81,50 @@ public class MainActivity extends AppCompatActivity {
                     .replace("$field_c3_value", String.valueOf(field_c3_value));
             text_solution.setText(solution);
             label_numberFormatException.setVisibility(View.INVISIBLE);
-        }catch(Exception e){
-            text_solution.setText("");
-            field_answer.setText("");
-            label_numberFormatException.setVisibility(View.VISIBLE);
+        }catch(Exception e) {
+            try {
+                String toBeSolved = "[($field_a1_value)×{($field_b2_value)×($field_c3_value) - ($field_b3_value)×($field_c2_value)}-($field_a2_value)×{($field_b1_value)×($field_c3_value) - ($field_b3_value)×($field_c1_value)}+($field_a3_value){($field_b1_value)×($field_c2_value) - ($field_b2_value)×($field_c1_value)}]"
+                        .replace("{", "(")
+                        .replace("[", "(")
+                        .replace("}", ")")
+                        .replace("]", ")")
+                        .replace("×", "*")
+                        .replace("$field_a1_value", field_a1.getText().toString())
+                        .replace("$field_a2_value", field_a2.getText().toString())
+                        .replace("$field_a3_value", field_a3.getText().toString())
+                        .replace("$field_b1_value", field_b1.getText().toString())
+                        .replace("$field_b2_value", field_b2.getText().toString())
+                        .replace("$field_b3_value", field_b3.getText().toString())
+                        .replace("$field_c1_value", field_c1.getText().toString())
+                        .replace("$field_c2_value", field_c2.getText().toString())
+                        .replace("$field_c3_value", field_c3.getText().toString());
+                Expression expression = new ExpressionBuilder(toBeSolved).build();
+                double result = expression.evaluate();
+                field_answer.setText(String.valueOf(result));
+
+                String solution = """
+                        $result = [($field_a1_value)×{($field_b2_value)×($field_c3_value) - ($field_b3_value)×($field_c2_value)}
+                                  - ($field_a2_value)×{($field_b1_value)×($field_c3_value) - ($field_b3_value)×($field_c1_value)}
+                                  + ($field_a3_value){($field_b1_value)×($field_c2_value) - ($field_b2_value)×($field_c1_value)}]"""
+                        .replace("$result", String.valueOf(result))
+                        .replace("$field_a1_value", field_a1.getText().toString())
+                        .replace("$field_a2_value", field_a2.getText().toString())
+                        .replace("$field_a3_value", field_a3.getText().toString())
+                        .replace("$field_b1_value", field_b1.getText().toString())
+                        .replace("$field_b2_value", field_b2.getText().toString())
+                        .replace("$field_b3_value", field_b3.getText().toString())
+                        .replace("$field_c1_value", field_c1.getText().toString())
+                        .replace("$field_c2_value", field_c2.getText().toString())
+                        .replace("$field_c3_value", field_c3.getText().toString());
+
+                text_solution.setText(solution);
+                label_numberFormatException.setVisibility(View.INVISIBLE);
+
+            } catch (Exception exception) {
+                text_solution.setText("");
+                field_answer.setText("");
+                label_numberFormatException.setVisibility(View.VISIBLE);
+            }
         }
     }
 
@@ -115,5 +157,6 @@ public class MainActivity extends AppCompatActivity {
         text_solution = findViewById(R.id.text_solution);
         submit_button = findViewById(R.id.submit_button);
         reset_button = findViewById(R.id.reset_button);
+        label_numberFormatException = findViewById(R.id.text_numberFormatException);
     }
 }
