@@ -20,7 +20,7 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
 
     private EditText field_a1, field_a2, field_a3, field_b1, field_b2, field_b3, field_c1, field_c2, field_c3, field_answer;
-    private TextView text_solution, label_numberFormatException;
+    private TextView text_solution, label_exception;
     private Button submit_button;
     private Button reset_button;
 
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                     .replace("$field_c2_value", String.valueOf(field_c2_value))
                     .replace("$field_c3_value", String.valueOf(field_c3_value));
             text_solution.setText(solution);
-            label_numberFormatException.setVisibility(View.INVISIBLE);
+            label_exception.setVisibility(View.INVISIBLE);
         }catch(Exception e) {
             try {
                 String toBeSolved = "[($field_a1_value)×{($field_b2_value)×($field_c3_value) - ($field_b3_value)×($field_c2_value)}-($field_a2_value)×{($field_b1_value)×($field_c3_value) - ($field_b3_value)×($field_c1_value)}+($field_a3_value){($field_b1_value)×($field_c2_value) - ($field_b2_value)×($field_c1_value)}]"
@@ -118,12 +118,20 @@ public class MainActivity extends AppCompatActivity {
                         .replace("$field_c3_value", field_c3.getText().toString());
 
                 text_solution.setText(solution);
-                label_numberFormatException.setVisibility(View.INVISIBLE);
+                label_exception.setVisibility(View.INVISIBLE);
 
-            } catch (Exception exception) {
+            } catch (IllegalArgumentException illegalArgumentException) {
+                illegalArgumentException.printStackTrace();
                 text_solution.setText("");
                 field_answer.setText("");
-                label_numberFormatException.setVisibility(View.VISIBLE);
+                label_exception.setText(R.string.invalid_expression_text);
+                label_exception.setVisibility(View.VISIBLE);
+            } catch (Exception exception) {
+                exception.printStackTrace();
+                text_solution.setText("");
+                field_answer.setText("");
+                label_exception.setText(R.string.invalid_input_text);
+                label_exception.setVisibility(View.VISIBLE);
             }
         }
     }
@@ -140,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
         field_c3.setText("");
         field_answer.setText("");
         text_solution.setText("");
-        findViewById(R.id.text_numberFormatException).setVisibility(View.INVISIBLE);
+        label_exception.setVisibility(View.INVISIBLE);
     }
 
     private void initializeVariable(){
@@ -157,6 +165,6 @@ public class MainActivity extends AppCompatActivity {
         text_solution = findViewById(R.id.text_solution);
         submit_button = findViewById(R.id.submit_button);
         reset_button = findViewById(R.id.reset_button);
-        label_numberFormatException = findViewById(R.id.text_numberFormatException);
+        label_exception = findViewById(R.id.text_exception);
     }
 }
