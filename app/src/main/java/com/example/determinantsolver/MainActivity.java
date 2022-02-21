@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         Configuration configuration = getResources().getConfiguration();
         configuration.fontScale = (float) 1;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void solve(@NotNull View view){
+
         try {
             solve_simple();
         }catch(Exception e) {
@@ -63,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void reset(@NotNull View view){
+
         field_a1.setText("");
         field_a2.setText("");
         field_a3.setText("");
@@ -78,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initializeVariable(){
+
         field_a1 = findViewById(R.id.text_a1);
         field_a2 = findViewById(R.id.text_a2);
         field_a3 = findViewById(R.id.text_a3);
@@ -95,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void solve_simple() throws NumberFormatException {
+
         if (Objects.equals(field_a1.getText().toString(), "") || Objects.equals(field_a2.getText().toString(), "") || Objects.equals(field_a3.getText().toString(), "") || Objects.equals(field_b1.getText().toString(), "") || Objects.equals(field_b2.getText().toString(), "") || Objects.equals(field_b3.getText().toString(), "") || Objects.equals(field_c1.getText().toString(), "") || Objects.equals(field_c2.getText().toString(), "") || Objects.equals(field_c3.getText().toString(), ""))
             return;
         double field_a1_value = Double.parseDouble(field_a1.getText().toString()),
@@ -114,11 +119,26 @@ public class MainActivity extends AppCompatActivity {
 
         String result_string = String.valueOf(Double.valueOf(result));
 
+        String field_b2_c3_value = String.valueOf(Double.parseDouble(String.valueOf(field_b2_value)) * Double.parseDouble(String.valueOf(field_c3_value))),
+                field_b3_c2_value = String.valueOf(Double.parseDouble(String.valueOf(field_b3_value)) * Double.parseDouble(String.valueOf(field_c2_value))),
+                field_b1_c3_value = String.valueOf(Double.parseDouble(String.valueOf(field_b1_value)) * Double.parseDouble(String.valueOf(field_c3_value))),
+                field_b3_c1_value = String.valueOf(Double.parseDouble(String.valueOf(field_b3_value)) * Double.parseDouble(String.valueOf(field_c1_value))),
+                field_b1_c2_value = String.valueOf(Double.parseDouble(String.valueOf(field_b1_value)) * Double.parseDouble(String.valueOf(field_c2_value))),
+                field_b2_c1_value = String.valueOf(Double.parseDouble(String.valueOf(field_b2_value)) * Double.parseDouble(String.valueOf(field_c1_value)));
+
         String solution = """
-                $result = [($field_a1_value)×{($field_b2_value)×($field_c3_value) - ($field_b3_value)×($field_c2_value)}
-                          - ($field_a2_value)×{($field_b1_value)×($field_c3_value) - ($field_b3_value)×($field_c1_value)}
-                          + ($field_a3_value)×{($field_b1_value)×($field_c2_value) - ($field_b2_value)×($field_c1_value)}]"""
-                .replace("$result", result_string)
+                [($field_a1_value)×{($field_b2_value)×($field_c3_value) - ($field_b3_value)×($field_c2_value)}
+                - ($field_a2_value)×{($field_b1_value)×($field_c3_value) - ($field_b3_value)×($field_c1_value)}
+                + ($field_a3_value)×{($field_b1_value)×($field_c2_value) - ($field_b2_value)×($field_c1_value)}]
+                                
+                = [$field_a1_value×{$field_b2*c3_value - $field_b3*c2_value}
+                 - $field_a2_value×{$field_b1*c3_value - $field_b3*c1_value}
+                 + $field_a3_value×{$field_b1*c2_value - $field_b2*c1_value}]
+                 
+                 = $field_a1*b2*c3_value - $field_a1*b3*c2_value - $field_a2*b1*c3_value + $field_a2*b3*c1_value + $field_a3*b1*c2_value - $field_a3*b2*c1_value
+                                
+                = $result"""
+
                 .replace("$field_a1_value", String.valueOf(field_a1_value))
                 .replace("$field_a2_value", String.valueOf(field_a2_value))
                 .replace("$field_a3_value", String.valueOf(field_a3_value))
@@ -127,7 +147,23 @@ public class MainActivity extends AppCompatActivity {
                 .replace("$field_b3_value", String.valueOf(field_b3_value))
                 .replace("$field_c1_value", String.valueOf(field_c1_value))
                 .replace("$field_c2_value", String.valueOf(field_c2_value))
-                .replace("$field_c3_value", String.valueOf(field_c3_value));
+                .replace("$field_c3_value", String.valueOf(field_c3_value))
+
+                .replace("$field_b2*c3_value", field_b2_c3_value)
+                .replace("$field_b3*c2_value", field_b3_c2_value)
+                .replace("$field_b1*c3_value", field_b1_c3_value)
+                .replace("$field_b3*c1_value", field_b3_c1_value)
+                .replace("$field_b1*c2_value", field_b1_c2_value)
+                .replace("$field_b2*c1_value", field_b2_c1_value)
+
+                .replace("$field_a1*b2*c3_value", String.valueOf(Double.parseDouble(String.valueOf(field_a1_value)) * Double.parseDouble(field_b2_c3_value)))
+                .replace("$field_a1*b3*c2_value", String.valueOf(Double.parseDouble(String.valueOf(field_a1_value)) * Double.parseDouble(field_b3_c2_value)))
+                .replace("$field_a2*b1*c3_value", String.valueOf(Double.parseDouble(String.valueOf(field_a2_value)) * Double.parseDouble(field_b1_c3_value)))
+                .replace("$field_a2*b3*c1_value", String.valueOf(Double.parseDouble(String.valueOf(field_a2_value)) * Double.parseDouble(field_b3_c1_value)))
+                .replace("$field_a3*b1*c2_value", String.valueOf(Double.parseDouble(String.valueOf(field_a3_value)) * Double.parseDouble(field_b1_c2_value)))
+                .replace("$field_a3*b2*c1_value", String.valueOf(Double.parseDouble(String.valueOf(field_a3_value)) * Double.parseDouble(field_b2_c1_value)))
+
+                .replace("$result", result_string);
 
         field_answer.setText(result_string);
         text_solution.setText(solution);
@@ -141,6 +177,7 @@ public class MainActivity extends AppCompatActivity {
                 .replace("}", ")")
                 .replace("]", ")")
                 .replace("×", "*")
+
                 .replace("$field_a1_value", field_a1.getText().toString())
                 .replace("$field_a2_value", field_a2.getText().toString())
                 .replace("$field_a3_value", field_a3.getText().toString())
@@ -150,6 +187,7 @@ public class MainActivity extends AppCompatActivity {
                 .replace("$field_c1_value", field_c1.getText().toString())
                 .replace("$field_c2_value", field_c2.getText().toString())
                 .replace("$field_c3_value", field_c3.getText().toString());
+
         Expression expression = new ExpressionBuilder(toBeSolved).build();
         double result = expression.evaluate();
         field_answer.setText(String.valueOf(result));
