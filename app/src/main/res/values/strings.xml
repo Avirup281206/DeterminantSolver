@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Determinant Solver</string>
-    <string name="top_label_name">Determinant Solver</string>
+    <string name="app_name">Math Solver</string>
+    <string name="top_label_name">Math Solver</string>
     <string name="submit_text">Submit</string>
     <string name="reset_text">Reset</string>
     <string name="field_a1_hint">A1</string>
@@ -19,5 +19,7 @@
         Version: 0.3\n\n
         This is a Determinant Solver made by me. Hope you like it</string>
     <string name="invalid_expression_text">Enter Valid Expression!</string>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
 
 </resources>

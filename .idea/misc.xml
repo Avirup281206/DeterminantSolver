@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Projects/Android_Projects/DeterminantSolver/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Projects/Android_Projects/DeterminantSolver/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Projects/Android_Projects/DeterminantSolver/app/src/main/res/layout/fragment_determinant.xml" value="0.22" />
+        <entry key="..\:/Projects/Android_Projects/DeterminantSolver/app/src/main/res/layout/fragment_home.xml" value="0.26145833333333335" />
+        <entry key="..\:/Projects/Android_Projects/DeterminantSolver/app/src/main/res/layout/nav_header.xml" value="0.11538461538461539" />
+        <entry key="..\:/Projects/Android_Projects/DeterminantSolver/app/src/main/res/menu/drawer_menu.xml" value="0.25" />
+        <entry key="..\:/Projects/Android_Projects/DeterminantSolver/app/src/main/res/menu/nav_drawer.xml" value="0.1" />
+        <entry key="..\:/Projects/Android_Projects/DeterminantSolver/app/src/main/res/mipmap-anydpi-v26/app_icon.xml" value="0.367" />
       </map>
     </option>
   </component>

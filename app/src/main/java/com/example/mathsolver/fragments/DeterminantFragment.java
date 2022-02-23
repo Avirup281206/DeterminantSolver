@@ -1,14 +1,18 @@
-package com.example.determinantsolver;
+package com.example.mathsolver.fragments;
 
-import android.content.res.Configuration;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
+import com.example.mathsolver.R;
 
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
@@ -17,37 +21,33 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
-public class MainActivity extends AppCompatActivity {
+public class DeterminantFragment extends Fragment {
 
     private EditText field_a1, field_a2, field_a3, field_b1, field_b2, field_b3, field_c1, field_c2, field_c3, field_answer;
     private TextView text_solution, label_exception;
     private Button submit_button;
     private Button reset_button;
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_determinant, container, false);
+    }
 
-        super.onCreate(savedInstanceState);
-        Configuration configuration = getResources().getConfiguration();
-        configuration.fontScale = (float) 1;
-
-        DisplayMetrics metrics = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(metrics);
-        metrics.scaledDensity = configuration.fontScale * metrics.density;
-        getBaseContext().getResources().updateConfiguration(configuration, metrics);
-        setContentView(R.layout.activity_main);
-
-        initializeVariable();
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        initializeVariable(view);
 
         submit_button.setOnClickListener(this::solve);
         reset_button.setOnClickListener(this::reset);
     }
 
-    private void solve(@NotNull View view){
+    private void solve(@NotNull View view) {
 
         try {
             solve_simple();
-        }catch(Exception e) {
+        } catch (Exception e) {
             try {
                 solve_expression();
             } catch (IllegalArgumentException illegalArgumentException) {
@@ -80,22 +80,22 @@ public class MainActivity extends AppCompatActivity {
         label_exception.setVisibility(View.INVISIBLE);
     }
 
-    private void initializeVariable(){
+    private void initializeVariable(View view) {
 
-        field_a1 = findViewById(R.id.text_a1);
-        field_a2 = findViewById(R.id.text_a2);
-        field_a3 = findViewById(R.id.text_a3);
-        field_b1 = findViewById(R.id.text_b1);
-        field_b2 = findViewById(R.id.text_b2);
-        field_b3 = findViewById(R.id.text_b3);
-        field_c1 = findViewById(R.id.text_c1);
-        field_c2 = findViewById(R.id.text_c2);
-        field_c3 = findViewById(R.id.text_c3);
-        field_answer = findViewById(R.id.text_answer);
-        text_solution = findViewById(R.id.text_solution);
-        submit_button = findViewById(R.id.submit_button);
-        reset_button = findViewById(R.id.reset_button);
-        label_exception = findViewById(R.id.text_exception);
+        field_a1 = view.findViewById(R.id.text_a1);
+        field_a2 = view.findViewById(R.id.text_a2);
+        field_a3 = view.findViewById(R.id.text_a3);
+        field_b1 = view.findViewById(R.id.text_b1);
+        field_b2 = view.findViewById(R.id.text_b2);
+        field_b3 = view.findViewById(R.id.text_b3);
+        field_c1 = view.findViewById(R.id.text_c1);
+        field_c2 = view.findViewById(R.id.text_c2);
+        field_c3 = view.findViewById(R.id.text_c3);
+        field_answer = view.findViewById(R.id.text_answer);
+        text_solution = view.findViewById(R.id.text_solution);
+        submit_button = view.findViewById(R.id.submit_button);
+        reset_button = view.findViewById(R.id.reset_button);
+        label_exception = view.findViewById(R.id.text_exception);
     }
 
     private void solve_simple() throws NumberFormatException {
@@ -266,4 +266,5 @@ public class MainActivity extends AppCompatActivity {
         text_solution.setText(solution);
         label_exception.setVisibility(View.INVISIBLE);
     }
+
 }

@@ -1,4 +1,4 @@
-package com.example.determinantsolver;
+package com.example.mathsolver;
 
 import android.content.Context;
 

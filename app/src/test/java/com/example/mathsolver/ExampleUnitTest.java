@@ -1,4 +1,4 @@
-package com.example.determinantsolver;
+package com.example.mathsolver;
 
 import org.junit.Test;
 
