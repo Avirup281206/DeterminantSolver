@@ -10,12 +10,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/app_icon_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.DeterminantSolver"
+        android:theme="@style/Theme.MathSolver"
         tools:targetApi="31">
 
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.DeterminantSolver.NoActionBar"
+            android:theme="@style/Theme.MathSolver.NoActionBar"
             android:exported="true"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
