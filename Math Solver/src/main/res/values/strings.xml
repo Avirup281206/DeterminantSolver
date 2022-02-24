@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Math Solver</string>
-    <string name="top_label_name">Math Solver</string>
+    <string name="determinant_fragment_top_label_name">Determinant</string>
+    <string name="home_fragment_top_label_name">Home</string>
     <string name="submit_text">Submit</string>
     <string name="reset_text">Reset</string>
     <string name="field_a1_hint">A1</string>

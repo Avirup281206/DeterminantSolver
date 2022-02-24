@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Projects/Android_Projects/DeterminantSolver/Math Solver/src/main/res/layout/fragment_determinant.xml" value="0.36666666666666664" />
+        <entry key="..\:/Projects/Android_Projects/DeterminantSolver/Math Solver/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/Projects/Android_Projects/DeterminantSolver/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Projects/Android_Projects/DeterminantSolver/app/src/main/res/layout/fragment_determinant.xml" value="0.22" />
         <entry key="..\:/Projects/Android_Projects/DeterminantSolver/app/src/main/res/layout/fragment_home.xml" value="0.26145833333333335" />
