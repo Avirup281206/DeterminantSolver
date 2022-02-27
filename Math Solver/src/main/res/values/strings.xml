@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Math Solver</string>
-    <string name="determinant_fragment_top_label_name">Determinant</string>
+    <string name="determinant_fragment_determinant2D_top_label_name">2D Determinant</string>
+    <string name="determinant_fragment_determinant3D_top_label_name">3D Determinant</string>
+    <string name="determinant_fragment_determinant4D_top_label_name">4D Determinant</string>
     <string name="home_fragment_top_label_name">Home</string>
     <string name="submit_text">Submit</string>
     <string name="reset_text">Reset</string>
