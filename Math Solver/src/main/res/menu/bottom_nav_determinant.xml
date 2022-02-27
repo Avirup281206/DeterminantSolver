@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_nav_2d"
+        android:icon="@drawable/determinant_2d"
+        android:title="2D Determinant" />
+
+    <item
+        android:id="@+id/bottom_nav_3d"
+        android:icon="@drawable/determinant_3d"
+        android:title="3D Determinant" />
+
+    <item
+        android:id="@+id/bottom_nav_4d"
+        android:icon="@drawable/determinant_4d"
+        android:title="4D Determinant" />
+
+</menu>
