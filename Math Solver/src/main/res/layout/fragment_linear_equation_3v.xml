@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fragments.linearEquationFragments.LinearEquation3v">
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/linear_equation_fragment_linear_equation_3v_top_label_name"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="689dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13">
+
+        <EditText
+            android:id="@+id/text_x1_le_3v"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:inputType="numberSigned|textPhonetic|numberDecimal"
+            android:nextFocusLeft="@id/text_y1_le_3v"
+            android:nextFocusRight="@id/text_y1_le_3v"
+            android:nextFocusUp="@id/text_y1_le_3v"
+            android:nextFocusDown="@id/text_y1_le_3v"
+            android:nextFocusForward="@id/text_y1_le_3v"
+            android:textAlignment="center"
+            android:textStyle="italic"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y1_le_3v"
+            app:layout_constraintEnd_toStartOf="@+id/textView14"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_x"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y1_le_3v"
+            app:layout_constraintEnd_toStartOf="@+id/textView15"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/text_x1_le_3v" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_plus"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y1_le_3v"
+            app:layout_constraintEnd_toStartOf="@+id/text_y1_le_3v"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView14" />
+
+        <EditText
+            android:id="@+id/text_y1_le_3v"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="70dp"
+            android:ems="10"
+            android:inputType="numberSigned|textPhonetic|numberDecimal"
+            android:nextFocusLeft="@id/text_z1_le_3v"
+            android:nextFocusRight="@id/text_z1_le_3v"
+            android:nextFocusUp="@id/text_z1_le_3v"
+            android:nextFocusDown="@id/text_z1_le_3v"
+            android:nextFocusForward="@id/text_z1_le_3v"
+            android:textAlignment="center"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toStartOf="@+id/textView16"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView15"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_y"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y1_le_3v"
+            app:layout_constraintEnd_toStartOf="@+id/textView17"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/text_y1_le_3v" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_plus"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y1_le_3v"
+            app:layout_constraintEnd_toStartOf="@+id/text_z1_le_3v"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView16" />
+
+        <EditText
+            android:id="@+id/text_z1_le_3v"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:inputType="numberSigned|textPhonetic|numberDecimal"
+            android:nextFocusLeft="@id/text_c1_le_3v"
+            android:nextFocusRight="@id/text_c1_le_3v"
+            android:nextFocusUp="@id/text_c1_le_3v"
+            android:nextFocusDown="@id/text_c1_le_3v"
+            android:nextFocusForward="@id/text_c1_le_3v"
+            android:textAlignment="center"
+            android:textStyle="italic"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y1_le_3v"
+            app:layout_constraintEnd_toStartOf="@+id/textView18"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView17" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_z"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y1_le_3v"
+            app:layout_constraintEnd_toStartOf="@+id/textView19"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/text_z1_le_3v" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_equal_to"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y1_le_3v"
+            app:layout_constraintEnd_toStartOf="@+id/text_c1_le_3v"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView18" />
+
+        <EditText
+            android:id="@+id/text_c1_le_3v"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:inputType="numberSigned|textPhonetic|numberDecimal"
+            android:nextFocusLeft="@id/text_x2_le_3v"
+            android:nextFocusRight="@id/text_x2_le_3v"
+            android:nextFocusUp="@id/text_x2_le_3v"
+            android:nextFocusDown="@id/text_x2_le_3v"
+            android:nextFocusForward="@id/text_x2_le_3v"
+            android:textAlignment="center"
+            android:textStyle="italic"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y1_le_3v"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView19" />
+
+        <EditText
+            android:id="@+id/text_x2_le_3v"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:inputType="numberSigned|textPhonetic|numberDecimal"
+            android:nextFocusLeft="@id/text_y2_le_3v"
+            android:nextFocusRight="@id/text_y2_le_3v"
+            android:nextFocusUp="@id/text_y2_le_3v"
+            android:nextFocusDown="@id/text_y2_le_3v"
+            android:nextFocusForward="@id/text_y2_le_3v"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textStyle="italic"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y2_le_3v"
+            app:layout_constraintEnd_toStartOf="@+id/textView20"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_x"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y2_le_3v"
+            app:layout_constraintEnd_toStartOf="@+id/textView21"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/text_x2_le_3v" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_plus"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y2_le_3v"
+            app:layout_constraintEnd_toStartOf="@+id/text_y2_le_3v"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView20" />
+
+        <EditText
+            android:id="@+id/text_y2_le_3v"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:inputType="numberSigned|textPhonetic|numberDecimal"
+            android:nextFocusLeft="@id/text_z2_le_3v"
+            android:nextFocusRight="@id/text_z2_le_3v"
+            android:nextFocusUp="@id/text_z2_le_3v"
+            android:nextFocusDown="@id/text_z2_le_3v"
+            android:nextFocusForward="@id/text_z2_le_3v"
+            android:textAlignment="center"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toStartOf="@+id/textView22"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView21"
+            app:layout_constraintTop_toBottomOf="@+id/text_y1_le_3v" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_y"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y2_le_3v"
+            app:layout_constraintEnd_toStartOf="@+id/textView23"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/text_y2_le_3v" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_plus"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y2_le_3v"
+            app:layout_constraintEnd_toStartOf="@+id/text_z2_le_3v"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView22" />
+
+        <EditText
+            android:id="@+id/text_z2_le_3v"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:inputType="numberSigned|textPhonetic|numberDecimal"
+            android:nextFocusLeft="@id/text_c2_le_3v"
+            android:nextFocusRight="@id/text_c2_le_3v"
+            android:nextFocusUp="@id/text_c2_le_3v"
+            android:nextFocusDown="@id/text_c2_le_3v"
+            android:nextFocusForward="@id/text_c2_le_3v"
+            android:textAlignment="center"
+            android:textStyle="italic"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y2_le_3v"
+            app:layout_constraintEnd_toStartOf="@+id/textView24"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView23" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_z"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y2_le_3v"
+            app:layout_constraintEnd_toStartOf="@+id/textView25"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/text_z2_le_3v" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_equal_to"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y2_le_3v"
+            app:layout_constraintEnd_toStartOf="@+id/text_c2_le_3v"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView24" />
+
+        <EditText
+            android:id="@+id/text_c2_le_3v"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:inputType="numberSigned|textPhonetic|numberDecimal"
+            android:nextFocusLeft="@id/text_x3_le_3v"
+            android:nextFocusRight="@id/text_x3_le_3v"
+            android:nextFocusUp="@id/text_x3_le_3v"
+            android:nextFocusDown="@id/text_x3_le_3v"
+            android:nextFocusForward="@id/text_x3_le_3v"
+            android:textAlignment="center"
+            android:textStyle="italic"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y2_le_3v"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView25" />
+
+        <EditText
+            android:id="@+id/text_x3_le_3v"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:inputType="numberSigned|textPhonetic|numberDecimal"
+            android:nextFocusLeft="@id/text_y3_le_3v"
+            android:nextFocusRight="@id/text_y3_le_3v"
+            android:nextFocusUp="@id/text_y3_le_3v"
+            android:nextFocusDown="@id/text_y3_le_3v"
+            android:nextFocusForward="@id/text_y3_le_3v"
+            android:textAlignment="center"
+            android:textStyle="italic"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y3_le_3v"
+            app:layout_constraintEnd_toStartOf="@+id/textView26"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_x"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y3_le_3v"
+            app:layout_constraintEnd_toStartOf="@+id/textView27"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/text_x3_le_3v" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_plus"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y3_le_3v"
+            app:layout_constraintEnd_toStartOf="@+id/text_y3_le_3v"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView26" />
+
+        <EditText
+            android:id="@+id/text_y3_le_3v"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:inputType="numberSigned|textPhonetic|numberDecimal"
+            android:nextFocusLeft="@id/text_z3_le_3v"
+            android:nextFocusRight="@id/text_z3_le_3v"
+            android:nextFocusUp="@id/text_z3_le_3v"
+            android:nextFocusDown="@id/text_z3_le_3v"
+            android:nextFocusForward="@id/text_z3_le_3v"
+            android:textAlignment="center"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toStartOf="@+id/textView28"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView27"
+            app:layout_constraintTop_toBottomOf="@+id/text_y2_le_3v" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_y"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y3_le_3v"
+            app:layout_constraintEnd_toStartOf="@+id/textView29"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/text_y3_le_3v" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_plus"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y3_le_3v"
+            app:layout_constraintEnd_toStartOf="@+id/text_z3_le_3v"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView28" />
+
+        <EditText
+            android:id="@+id/text_z3_le_3v"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:inputType="numberSigned|textPhonetic|numberDecimal"
+            android:nextFocusLeft="@id/text_c3_le_3v"
+            android:nextFocusRight="@id/text_c3_le_3v"
+            android:nextFocusUp="@id/text_c3_le_3v"
+            android:nextFocusDown="@id/text_c3_le_3v"
+            android:nextFocusForward="@id/text_c3_le_3v"
+            android:textAlignment="center"
+            android:textStyle="italic"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y3_le_3v"
+            app:layout_constraintEnd_toStartOf="@+id/textView30"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView29" />
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_z"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y3_le_3v"
+            app:layout_constraintEnd_toStartOf="@+id/textView31"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/text_z3_le_3v" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_equal_to"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y3_le_3v"
+            app:layout_constraintEnd_toStartOf="@+id/text_c3_le_3v"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView30" />
+
+        <EditText
+            android:id="@+id/text_c3_le_3v"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:inputType="numberSigned|textPhonetic|numberDecimal"
+            android:nextFocusLeft="@id/text_x1_le_3v"
+            android:nextFocusRight="@id/text_x1_le_3v"
+            android:nextFocusUp="@id/text_x1_le_3v"
+            android:nextFocusDown="@id/text_x1_le_3v"
+            android:nextFocusForward="@id/text_x1_le_3v"
+            android:textAlignment="center"
+            android:textStyle="italic"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_y3_le_3v"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView31" />
+
+        <Button
+            android:id="@+id/sumbit_button_le_3v"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/submit_text"
+            app:layout_constraintEnd_toStartOf="@+id/reset_button_le_3v"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_y3_le_3v" />
+
+        <Button
+            android:id="@+id/reset_button_le_3v"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reset_text"
+            app:layout_constraintBaseline_toBaselineOf="@+id/sumbit_button_le_3v"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/sumbit_button_le_3v" />
+
+        <TextView
+            android:id="@+id/text_answer_le_3v"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_y3_le_3v" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_nav_2v_le"
+        android:icon="@drawable/linear_equation"
+        android:title="@string/menu_title_2v_linear_equation" />
+    <item
+        android:id="@+id/bottom_nav_3v_le"
+        android:title="@string/menu_title_3v_linear_equation" />
+    <item
+        android:id="@+id/bottom_nav_4v_le"
+        android:title="@string/menu_title_4v_linear_equation" />
+
+</menu>

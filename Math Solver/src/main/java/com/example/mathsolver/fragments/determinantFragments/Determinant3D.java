@@ -1,12 +1,15 @@
 package com.example.mathsolver.fragments.determinantFragments;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,7 +27,7 @@ import java.util.Objects;
 public class Determinant3D extends Fragment {
 
     private EditText field_a1, field_a2, field_a3, field_b1, field_b2, field_b3, field_c1, field_c2, field_c3, field_answer;
-    private TextView text_solution, label_exception;
+    private TextView text_solution;
     private Button submit_button;
     private Button reset_button;
 
@@ -45,7 +48,7 @@ public class Determinant3D extends Fragment {
     }
 
     private void solve(@NotNull View view) {
-
+        ((InputMethodManager) requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
         try {
             solve_simple();
         } catch (Exception e) {
@@ -54,13 +57,11 @@ public class Determinant3D extends Fragment {
             } catch (IllegalArgumentException illegalArgumentException) {
                 text_solution.setText("");
                 field_answer.setText("");
-                label_exception.setText(R.string.invalid_expression_text);
-                label_exception.setVisibility(View.VISIBLE);
+                Toast.makeText(requireActivity().getApplicationContext(), R.string.invalid_expression_text, Toast.LENGTH_SHORT).show();
             } catch (Exception exception) {
                 text_solution.setText("");
                 field_answer.setText("");
-                label_exception.setText(R.string.invalid_input_text);
-                label_exception.setVisibility(View.VISIBLE);
+                Toast.makeText(requireActivity().getApplicationContext(), R.string.invalid_input_text, Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -78,7 +79,6 @@ public class Determinant3D extends Fragment {
         field_c3.setText("");
         field_answer.setText("");
         text_solution.setText("");
-        label_exception.setVisibility(View.INVISIBLE);
     }
 
     private void initializeVariable(View view) {
@@ -96,7 +96,6 @@ public class Determinant3D extends Fragment {
         text_solution = view.findViewById(R.id.text_solution);
         submit_button = view.findViewById(R.id.submit_button);
         reset_button = view.findViewById(R.id.reset_button);
-        label_exception = view.findViewById(R.id.text_exception);
     }
 
     private void solve_simple() throws NumberFormatException {
@@ -168,7 +167,6 @@ public class Determinant3D extends Fragment {
 
         field_answer.setText(result_string);
         text_solution.setText(solution);
-        label_exception.setVisibility(View.INVISIBLE);
     }
 
     private void solve_expression() {
@@ -265,6 +263,5 @@ public class Determinant3D extends Fragment {
                 .replace("$result", String.valueOf(result));
 
         text_solution.setText(solution);
-        label_exception.setVisibility(View.INVISIBLE);
     }
 }

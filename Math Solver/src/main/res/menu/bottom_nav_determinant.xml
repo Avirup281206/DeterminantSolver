@@ -4,16 +4,16 @@
     <item
         android:id="@+id/bottom_nav_2d"
         android:icon="@drawable/determinant_2d"
-        android:title="2D Determinant" />
+        android:title="@string/menu_title_2D_Determinant" />
 
     <item
         android:id="@+id/bottom_nav_3d"
         android:icon="@drawable/determinant_3d"
-        android:title="3D Determinant" />
+        android:title="@string/menu_title_3D_Determinant" />
 
     <item
         android:id="@+id/bottom_nav_4d"
         android:icon="@drawable/determinant_4d"
-        android:title="4D Determinant" />
+        android:title="@string/menu_title_4D_Determinant" />
 
 </menu>

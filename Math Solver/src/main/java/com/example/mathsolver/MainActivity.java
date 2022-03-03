@@ -14,6 +14,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.mathsolver.fragments.DeterminantFragment;
 import com.example.mathsolver.fragments.HomeFragment;
+import com.example.mathsolver.fragments.LinearEquationFragment;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (item.getItemId()) {
             case R.id.nav_determinant -> getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new DeterminantFragment()).commit();
             case R.id.nav_home -> getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+            case R.id.nav_linear_equation -> getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new LinearEquationFragment()).commit();
         }
 
         drawer.closeDrawer(GravityCompat.START);

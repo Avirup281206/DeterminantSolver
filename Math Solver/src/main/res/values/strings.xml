@@ -21,5 +21,19 @@
     <string name="invalid_expression_text">Enter Valid Expression!</string>
     <string name="navigation_drawer_open">Open Navigation Drawer</string>
     <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="linear_equation_fragment_linear_equation_2v_top_label_name">Linear Equation with 2 variables</string>
+    <string name="linear_equation_fragment_linear_equation_3v_top_label_name">Linear Equation with 3 variables</string>
+    <string name="linear_equation_fragment_linear_equation_4v_top_label_name">Linear Equation with 4 variables</string>
+    <string name="text_x">X</string>
+    <string name="text_y">Y</string>
+    <string name="text_z">Z</string>
+    <string name="text_plus">+</string>
+    <string name="text_equal_to">=</string>
+    <string name="menu_title_2D_Determinant">2D Determiant</string>
+    <string name="menu_title_3D_Determinant">3D Determiant</string>
+    <string name="menu_title_4D_Determinant">4D Determiant</string>
+    <string name="menu_title_2v_linear_equation">2 varible</string>
+    <string name="menu_title_3v_linear_equation">3 varible</string>
+    <string name="menu_title_4v_linear_equation">4 varible</string>
 
 </resources>

@@ -6,16 +6,16 @@
     android:background="@color/gainsboro">
 
     <FrameLayout
-        android:id="@+id/fragment_container_determinant"
+        android:id="@+id/fragment_container_linear_equation"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/bottom_nav_determinant" />
+        android:layout_above="@+id/bottom_nav_linear_equation" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_nav_determinant"
+        android:id="@+id/bottom_nav_linear_equation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:menu="@menu/bottom_nav_determinant" />
+        app:menu="@menu/bottom_nav_linear_equation" />
 
 </RelativeLayout>
