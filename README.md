@@ -1,2 +1,2 @@
-# DeterminantSolver
- A Determinant Solver created by me
+# Math Solver
+ A Math Solver created by me
