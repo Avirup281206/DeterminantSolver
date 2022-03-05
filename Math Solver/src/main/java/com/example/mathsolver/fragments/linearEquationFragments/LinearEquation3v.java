@@ -25,6 +25,7 @@ import org.apache.commons.math3.linear.DecompositionSolver;
 import org.apache.commons.math3.linear.LUDecomposition;
 import org.apache.commons.math3.linear.RealMatrix;
 import org.apache.commons.math3.linear.RealVector;
+import org.apache.commons.math3.linear.SingularMatrixException;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
@@ -59,6 +60,9 @@ public class LinearEquation3v extends Fragment {
         } catch (Exception e) {
             try {
                 solve_expression();
+            } catch (SingularMatrixException singularMatrixException) {
+                text_answer.setText("");
+                Toast.makeText(requireActivity().getApplicationContext(), "No Unique Solution", Toast.LENGTH_SHORT).show();
             } catch (Exception e1) {
                 text_answer.setText("");
                 Toast.makeText(requireActivity().getApplicationContext(), "Enter Valid Input", Toast.LENGTH_SHORT).show();
