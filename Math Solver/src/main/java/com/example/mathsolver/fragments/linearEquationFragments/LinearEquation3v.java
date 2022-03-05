@@ -107,7 +107,18 @@ public class LinearEquation3v extends Fragment {
     }
 
     private void solve_simple() {
-        if (Objects.equals(field_x1.getText().toString(), "") || Objects.equals(field_x2.getText().toString(), "") || Objects.equals(field_x3.getText().toString(), "") || Objects.equals(field_y1.getText().toString(), "") || Objects.equals(field_y2.getText().toString(), "") || Objects.equals(field_y3.getText().toString(), "") || Objects.equals(field_z1.getText().toString(), "") || Objects.equals(field_z2.getText().toString(), "") || Objects.equals(field_z3.getText().toString(), "") || Objects.equals(field_c1.getText().toString(), "") || Objects.equals(field_c2.getText().toString(), "") || Objects.equals(field_c3.getText().toString(), ""))
+        if (Objects.equals(field_x1.getText().toString(), "") ||
+                Objects.equals(field_x2.getText().toString(), "") ||
+                Objects.equals(field_x3.getText().toString(), "") ||
+                Objects.equals(field_y1.getText().toString(), "") ||
+                Objects.equals(field_y2.getText().toString(), "") ||
+                Objects.equals(field_y3.getText().toString(), "") ||
+                Objects.equals(field_z1.getText().toString(), "") ||
+                Objects.equals(field_z2.getText().toString(), "") ||
+                Objects.equals(field_z3.getText().toString(), "") ||
+                Objects.equals(field_c1.getText().toString(), "") ||
+                Objects.equals(field_c2.getText().toString(), "") ||
+                Objects.equals(field_c3.getText().toString(), ""))
             return;
         double field_x1_value = Double.parseDouble(field_x1.getText().toString()),
                 field_x2_value = Double.parseDouble(field_x2.getText().toString()),
@@ -121,14 +132,6 @@ public class LinearEquation3v extends Fragment {
                 field_c1_value = Double.parseDouble(field_c1.getText().toString()),
                 field_c2_value = Double.parseDouble(field_c2.getText().toString()),
                 field_c3_value = Double.parseDouble(field_c3.getText().toString());
-
-        /*if (field_x1_value / field_x2_value == field_y1_value / field_y2_value && field_y1_value / field_y2_value == field_c1_value / field_c2_value) {
-            Toast.makeText(getContext(), "The lines are same", Toast.LENGTH_SHORT).show();
-            return;
-        } else if (field_x1_value / field_x2_value == field_y1_value / field_y2_value && field_y1_value / field_y2_value != field_c1_value / field_c2_value) {
-            Toast.makeText(getContext(), "The lines are parallel", Toast.LENGTH_SHORT).show();
-            return;
-        }*/
 
         RealMatrix coefficients = new Array2DRowRealMatrix(new double[][]{
                 {field_x1_value, field_y1_value, field_z1_value},
@@ -163,15 +166,6 @@ public class LinearEquation3v extends Fragment {
                 field_c1_value = new ExpressionBuilder(field_c1.getText().toString()).build().evaluate(),
                 field_c2_value = new ExpressionBuilder(field_c2.getText().toString()).build().evaluate(),
                 field_c3_value = new ExpressionBuilder(field_c3.getText().toString()).build().evaluate();
-
-
-        /*if (field_x1_value / field_x2_value == field_y1_value / field_y2_value && field_y1_value / field_y2_value == field_c1_value / field_c2_value) {
-            Toast.makeText(getContext(), "The lines are same", Toast.LENGTH_SHORT).show();
-            return;
-        } else if (field_x1_value / field_x2_value == field_y1_value / field_y2_value && field_y1_value / field_y2_value != field_c1_value / field_c2_value) {
-            Toast.makeText(getContext(), "The lines are parallel", Toast.LENGTH_SHORT).show();
-            return;
-        }*/
 
         RealMatrix coefficients = new Array2DRowRealMatrix(new double[][]{
                 {field_x1_value, field_y1_value, field_z1_value},

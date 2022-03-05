@@ -7,15 +7,15 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home"
-            android:title="Home" />
+            android:title="@string/nav_drawer_home" />
         <item
             android:id="@+id/nav_linear_equation"
-            android:icon="@drawable/linear_equation"
-            android:title="Linear Equation" />
+            android:icon="@drawable/linear_equation_2v"
+            android:title="@string/nav_drawer_linear_equation" />
         <item
             android:id="@+id/nav_determinant"
             android:icon="@drawable/ic_determinant"
-            android:title="Determinant" />
+            android:title="@string/nav_drawer_determinant" />
     </group>
 
 </menu>

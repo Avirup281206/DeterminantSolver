@@ -1,12 +1,820 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".fragments.linearEquationFragments.LinearEquation4v">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="4v Under Development" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="0dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/linear_equation_fragment_linear_equation_4v_top_label_name"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+            <EditText
+                android:id="@+id/text_w1_le_4v"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:inputType="numberSigned|textPhonetic|numberDecimal"
+                android:nextFocusLeft="@id/text_x1_le_4v"
+                android:nextFocusRight="@id/text_x1_le_4v"
+                android:nextFocusUp="@id/text_x1_le_4v"
+                android:nextFocusDown="@id/text_x1_le_4v"
+                android:nextFocusForward="@id/text_x1_le_4v"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y1_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView32"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_w"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y1_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView33"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_w1_le_4v" />
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_plus"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y1_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/text_x1_le_4v"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView32" />
+
+            <EditText
+                android:id="@+id/text_x1_le_4v"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:inputType="numberSigned|textPhonetic|numberDecimal"
+                android:nextFocusLeft="@id/text_y1_le_4v"
+                android:nextFocusRight="@id/text_y1_le_4v"
+                android:nextFocusUp="@id/text_y1_le_4v"
+                android:nextFocusDown="@id/text_y1_le_4v"
+                android:nextFocusForward="@id/text_y1_le_4v"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y1_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView34"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView33" />
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_x"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y1_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView35"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_x1_le_4v" />
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_plus"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y1_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/text_y1_le_4v"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView34" />
+
+            <EditText
+                android:id="@+id/text_y1_le_4v"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="50dp"
+                android:ems="10"
+                android:inputType="numberSigned|textPhonetic|numberDecimal"
+                android:nextFocusLeft="@id/text_z1_le_4v"
+                android:nextFocusRight="@id/text_z1_le_4v"
+                android:nextFocusUp="@id/text_z1_le_4v"
+                android:nextFocusDown="@id/text_z1_le_4v"
+                android:nextFocusForward="@id/text_z1_le_4v"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toStartOf="@+id/textView36"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView35"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_y"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y1_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView37"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_y1_le_4v" />
+
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_plus"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y1_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/text_z1_le_4v"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView36" />
+
+            <EditText
+                android:id="@+id/text_z1_le_4v"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:inputType="numberSigned|textPhonetic|numberDecimal"
+                android:nextFocusLeft="@id/text_c1_le_4v"
+                android:nextFocusRight="@id/text_c1_le_4v"
+                android:nextFocusUp="@id/text_c1_le_4v"
+                android:nextFocusDown="@id/text_c1_le_4v"
+                android:nextFocusForward="@id/text_c1_le_4v"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y1_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView38"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView37" />
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_z"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y1_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView39"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_z1_le_4v" />
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_equal_to"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y1_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/text_c1_le_4v"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView38" />
+
+            <EditText
+                android:id="@+id/text_c1_le_4v"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:inputType="numberSigned|textPhonetic|numberDecimal"
+                android:nextFocusLeft="@id/text_w2_le_4v"
+                android:nextFocusRight="@id/text_w2_le_4v"
+                android:nextFocusUp="@id/text_w2_le_4v"
+                android:nextFocusDown="@id/text_w2_le_4v"
+                android:nextFocusForward="@id/text_w2_le_4v"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y1_le_4v"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView39" />
+
+            <EditText
+                android:id="@+id/text_w2_le_4v"
+                android:layout_width="42dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberSigned|textPhonetic|numberDecimal"
+                android:nextFocusLeft="@id/text_x2_le_4v"
+                android:nextFocusRight="@id/text_x2_le_4v"
+                android:nextFocusUp="@id/text_x2_le_4v"
+                android:nextFocusDown="@id/text_x2_le_4v"
+                android:nextFocusForward="@id/text_x2_le_4v"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y2_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView40"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_w"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y2_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView41"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_w2_le_4v" />
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_plus"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y2_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/text_x2_le_4v"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView40" />
+
+            <EditText
+                android:id="@+id/text_x2_le_4v"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:inputType="numberSigned|textPhonetic|numberDecimal"
+                android:nextFocusLeft="@id/text_y2_le_4v"
+                android:nextFocusRight="@id/text_y2_le_4v"
+                android:nextFocusUp="@id/text_y2_le_4v"
+                android:nextFocusDown="@id/text_y2_le_4v"
+                android:nextFocusForward="@id/text_y2_le_4v"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y2_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView42"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView41" />
+
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_x"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y2_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView43"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_x2_le_4v" />
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_plus"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y2_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/text_y2_le_4v"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView42" />
+
+            <EditText
+                android:id="@+id/text_y2_le_4v"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:inputType="numberSigned|textPhonetic|numberDecimal"
+                android:nextFocusLeft="@id/text_z2_le_4v"
+                android:nextFocusRight="@id/text_z2_le_4v"
+                android:nextFocusUp="@id/text_z2_le_4v"
+                android:nextFocusDown="@id/text_z2_le_4v"
+                android:nextFocusForward="@id/text_z2_le_4v"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toStartOf="@+id/textView44"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView43"
+                app:layout_constraintTop_toBottomOf="@+id/text_y1_le_4v" />
+
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_y"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y2_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView45"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_y2_le_4v" />
+
+            <TextView
+                android:id="@+id/textView45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_plus"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y2_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/text_z2_le_4v"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView44" />
+
+            <EditText
+                android:id="@+id/text_z2_le_4v"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:inputType="numberSigned|textPhonetic|numberDecimal"
+                android:nextFocusLeft="@id/text_c2_le_4v"
+                android:nextFocusRight="@id/text_c2_le_4v"
+                android:nextFocusUp="@id/text_c2_le_4v"
+                android:nextFocusDown="@id/text_c2_le_4v"
+                android:nextFocusForward="@id/text_c2_le_4v"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y2_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView46"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView45" />
+
+            <TextView
+                android:id="@+id/textView46"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_z"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y2_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView47"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_z2_le_4v" />
+
+            <TextView
+                android:id="@+id/textView47"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_equal_to"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y2_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/text_c2_le_4v"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView46" />
+
+            <EditText
+                android:id="@+id/text_c2_le_4v"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:inputType="numberSigned|textPhonetic|numberDecimal"
+                android:nextFocusLeft="@id/text_w3_le_4v"
+                android:nextFocusRight="@id/text_w3_le_4v"
+                android:nextFocusUp="@id/text_w3_le_4v"
+                android:nextFocusDown="@id/text_w3_le_4v"
+                android:nextFocusForward="@id/text_w3_le_4v"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y2_le_4v"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView47" />
+
+            <EditText
+                android:id="@+id/text_w3_le_4v"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:nextFocusLeft="@id/text_x3_le_4v"
+                android:nextFocusRight="@id/text_x3_le_4v"
+                android:nextFocusUp="@id/text_x3_le_4v"
+                android:nextFocusDown="@id/text_x3_le_4v"
+                android:nextFocusForward="@id/text_x3_le_4v"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y3_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView48"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView48"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_w"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y3_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView49"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_w3_le_4v" />
+
+            <TextView
+                android:id="@+id/textView49"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_plus"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y3_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/text_x3_le_4v"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView48" />
+
+            <EditText
+                android:id="@+id/text_x3_le_4v"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:nextFocusLeft="@id/text_y3_le_4v"
+                android:nextFocusRight="@id/text_y3_le_4v"
+                android:nextFocusUp="@id/text_y3_le_4v"
+                android:nextFocusDown="@id/text_y3_le_4v"
+                android:nextFocusForward="@id/text_y3_le_4v"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y3_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView50"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView49" />
+
+            <TextView
+                android:id="@+id/textView50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_x"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y3_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView51"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_x3_le_4v" />
+
+            <TextView
+                android:id="@+id/textView51"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_plus"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y3_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/text_y3_le_4v"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView50" />
+
+            <EditText
+                android:id="@+id/text_y3_le_4v"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:nextFocusLeft="@id/text_z3_le_4v"
+                android:nextFocusRight="@id/text_z3_le_4v"
+                android:nextFocusUp="@id/text_z3_le_4v"
+                android:nextFocusDown="@id/text_z3_le_4v"
+                android:nextFocusForward="@id/text_z3_le_4v"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toStartOf="@+id/textView52"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView51"
+                app:layout_constraintTop_toBottomOf="@+id/text_y2_le_4v" />
+
+            <TextView
+                android:id="@+id/textView52"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_y"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y3_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView53"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_y3_le_4v" />
+
+            <TextView
+                android:id="@+id/textView53"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_plus"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y3_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/text_z3_le_4v"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView52" />
+
+            <EditText
+                android:id="@+id/text_z3_le_4v"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:nextFocusLeft="@id/text_c3_le_4v"
+                android:nextFocusRight="@id/text_c3_le_4v"
+                android:nextFocusUp="@id/text_c3_le_4v"
+                android:nextFocusDown="@id/text_c3_le_4v"
+                android:nextFocusForward="@id/text_c3_le_4v"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y3_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView54"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView53" />
+
+            <TextView
+                android:id="@+id/textView54"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_z"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y3_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView55"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_z3_le_4v" />
+
+            <TextView
+                android:id="@+id/textView55"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_equal_to"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y3_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/text_c3_le_4v"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView54" />
+
+            <EditText
+                android:id="@+id/text_c3_le_4v"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:nextFocusLeft="@id/text_w4_le_4v"
+                android:nextFocusRight="@id/text_w4_le_4v"
+                android:nextFocusUp="@id/text_w4_le_4v"
+                android:nextFocusDown="@id/text_w4_le_4v"
+                android:nextFocusForward="@id/text_w4_le_4v"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y3_le_4v"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView55" />
+
+            <EditText
+                android:id="@+id/text_w4_le_4v"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:nextFocusLeft="@id/text_x4_le_4v"
+                android:nextFocusRight="@id/text_x4_le_4v"
+                android:nextFocusUp="@id/text_x4_le_4v"
+                android:nextFocusDown="@id/text_x4_le_4v"
+                android:nextFocusForward="@id/text_x4_le_4v"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y4_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView56"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView56"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_w"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y4_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView57"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_w4_le_4v" />
+
+            <TextView
+                android:id="@+id/textView57"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_plus"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y4_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/text_x4_le_4v"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView56" />
+
+            <EditText
+                android:id="@+id/text_x4_le_4v"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:nextFocusLeft="@id/text_y4_le_4v"
+                android:nextFocusRight="@id/text_y4_le_4v"
+                android:nextFocusUp="@id/text_y4_le_4v"
+                android:nextFocusDown="@id/text_y4_le_4v"
+                android:nextFocusForward="@id/text_y4_le_4v"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y4_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView58"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView57" />
+
+            <TextView
+                android:id="@+id/textView58"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_x"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y4_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView59"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_x4_le_4v" />
+
+            <TextView
+                android:id="@+id/textView59"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_plus"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y4_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/text_y4_le_4v"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView58" />
+
+            <EditText
+                android:id="@+id/text_y4_le_4v"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:nextFocusLeft="@id/text_z4_le_4v"
+                android:nextFocusRight="@id/text_z4_le_4v"
+                android:nextFocusUp="@id/text_z4_le_4v"
+                android:nextFocusDown="@id/text_z4_le_4v"
+                android:nextFocusForward="@id/text_z4_le_4v"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toStartOf="@+id/textView60"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView59"
+                app:layout_constraintTop_toBottomOf="@+id/text_y3_le_4v" />
+
+            <TextView
+                android:id="@+id/textView60"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_y"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y4_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView61"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_y4_le_4v" />
+
+            <TextView
+                android:id="@+id/textView61"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_plus"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y4_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/text_z4_le_4v"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView60" />
+
+            <EditText
+                android:id="@+id/text_z4_le_4v"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:nextFocusLeft="@id/text_c4_le_4v"
+                android:nextFocusRight="@id/text_c4_le_4v"
+                android:nextFocusUp="@id/text_c4_le_4v"
+                android:nextFocusDown="@id/text_c4_le_4v"
+                android:nextFocusForward="@id/text_c4_le_4v"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y4_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView62"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView61" />
+
+            <TextView
+                android:id="@+id/textView62"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_z"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y4_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/textView63"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_z4_le_4v" />
+
+            <TextView
+                android:id="@+id/textView63"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_plus"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y4_le_4v"
+                app:layout_constraintEnd_toStartOf="@+id/text_c4_le_4v"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView62" />
+
+            <EditText
+                android:id="@+id/text_c4_le_4v"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:nextFocusLeft="@id/text_w1_le_4v"
+                android:nextFocusRight="@id/text_w1_le_4v"
+                android:nextFocusUp="@id/text_w1_le_4v"
+                android:nextFocusDown="@id/text_w1_le_4v"
+                android:nextFocusForward="@id/text_w1_le_4v"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_y4_le_4v"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView63" />
+
+            <Button
+                android:id="@+id/submit_button_le_4v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/submit_text"
+                app:layout_constraintEnd_toStartOf="@+id/reset_button_le_4v"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_y4_le_4v" />
+
+            <Button
+                android:id="@+id/reset_button_le_4v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reset_text"
+                app:layout_constraintBaseline_toBaselineOf="@+id/submit_button_le_4v"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/submit_button_le_4v" />
+
+            <TextView
+                android:id="@+id/text_answer_le_4v"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_y4_le_4v" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
