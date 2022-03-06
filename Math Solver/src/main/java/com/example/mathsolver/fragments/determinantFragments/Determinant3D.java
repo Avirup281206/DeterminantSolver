@@ -100,7 +100,15 @@ public class Determinant3D extends Fragment {
 
     private void solve_simple() throws NumberFormatException {
 
-        if (Objects.equals(field_a1.getText().toString(), "") || Objects.equals(field_a2.getText().toString(), "") || Objects.equals(field_a3.getText().toString(), "") || Objects.equals(field_b1.getText().toString(), "") || Objects.equals(field_b2.getText().toString(), "") || Objects.equals(field_b3.getText().toString(), "") || Objects.equals(field_c1.getText().toString(), "") || Objects.equals(field_c2.getText().toString(), "") || Objects.equals(field_c3.getText().toString(), ""))
+        if (Objects.equals(field_a1.getText().toString(), "") ||
+                Objects.equals(field_a2.getText().toString(), "") ||
+                Objects.equals(field_a3.getText().toString(), "") ||
+                Objects.equals(field_b1.getText().toString(), "") ||
+                Objects.equals(field_b2.getText().toString(), "") ||
+                Objects.equals(field_b3.getText().toString(), "") ||
+                Objects.equals(field_c1.getText().toString(), "") ||
+                Objects.equals(field_c2.getText().toString(), "") ||
+                Objects.equals(field_c3.getText().toString(), ""))
             return;
         double field_a1_value = Double.parseDouble(field_a1.getText().toString()),
                 field_a2_value = Double.parseDouble(field_a2.getText().toString()),
