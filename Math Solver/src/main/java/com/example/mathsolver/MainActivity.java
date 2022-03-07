@@ -7,6 +7,7 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -53,10 +54,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public void onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START))
-            drawer.closeDrawer(GravityCompat.START);
-        else
-            super.onBackPressed();
+        if (drawer.isDrawerOpen(GravityCompat.START)) drawer.closeDrawer(GravityCompat.START);
+        else super.onBackPressed();
     }
 
     @Override
@@ -66,6 +65,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_determinant -> getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new DeterminantFragment()).commit();
             case R.id.nav_home -> getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
             case R.id.nav_linear_equation -> getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new LinearEquationFragment()).commit();
+            case R.id.nav_about -> {
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setMessage(R.string.info);
+                builder.setTitle("About");
+                builder.setCancelable(false);
+                builder.setNegativeButton("Ok", (dialog, which) -> dialog.cancel());
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
         }
 
         drawer.closeDrawer(GravityCompat.START);

@@ -18,4 +18,11 @@
             android:title="@string/nav_drawer_determinant" />
     </group>
 
+    <group>
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_baseline_info_24"
+            android:title="About" />
+    </group>
+
 </menu>

@@ -46,5 +46,6 @@
     <string name="menu_title_2v_linear_equation">2 varible</string>
     <string name="menu_title_3v_linear_equation">3 varible</string>
     <string name="menu_title_4v_linear_equation">4 varible</string>
+    <string name="home_string">Never leave a sum unsolved</string>
 
 </resources>
