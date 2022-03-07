@@ -1,5 +1,6 @@
 package com.example.mathsolver;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -73,6 +74,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 builder.setNegativeButton("Ok", (dialog, which) -> dialog.cancel());
                 AlertDialog alertDialog = builder.create();
                 alertDialog.show();
+            }
+            case R.id.nav_share -> {
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, """
+                        Try out this math solver
+                        https://github.com/Avirup281206/math-solver-mobile/releases/download/v0.4.1/Math.Solver.apk""");
+                sendIntent.setType("text/plain");
+                Intent shareIntent = Intent.createChooser(sendIntent, "Share via");
+                startActivity(shareIntent);
             }
         }
 

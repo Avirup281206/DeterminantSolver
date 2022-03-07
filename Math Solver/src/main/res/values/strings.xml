@@ -47,5 +47,7 @@
     <string name="menu_title_3v_linear_equation">3 varible</string>
     <string name="menu_title_4v_linear_equation">4 varible</string>
     <string name="home_string">Never leave a sum unsolved</string>
+    <string name="nav_drawer_about">About</string>
+    <string name="nav_drawer_share">Share</string>
 
 </resources>
