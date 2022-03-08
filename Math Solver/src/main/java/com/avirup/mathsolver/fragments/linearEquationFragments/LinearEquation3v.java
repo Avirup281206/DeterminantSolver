@@ -1,4 +1,4 @@
-package com.example.mathsolver.fragments.linearEquationFragments;
+package com.avirup.mathsolver.fragments.linearEquationFragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -15,7 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.mathsolver.R;
+import com.avirup.mathsolver.R;
 
 import net.objecthunter.exp4j.ExpressionBuilder;
 

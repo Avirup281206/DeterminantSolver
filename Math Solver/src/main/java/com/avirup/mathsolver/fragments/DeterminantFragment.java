@@ -1,4 +1,4 @@
-package com.example.mathsolver.fragments;
+package com.avirup.mathsolver.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,10 +9,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.mathsolver.R;
-import com.example.mathsolver.fragments.determinantFragments.Determinant2D;
-import com.example.mathsolver.fragments.determinantFragments.Determinant3D;
-import com.example.mathsolver.fragments.determinantFragments.Determinant4D;
+import com.avirup.mathsolver.R;
+import com.avirup.mathsolver.fragments.determinantFragments.Determinant2D;
+import com.avirup.mathsolver.fragments.determinantFragments.Determinant3D;
+import com.avirup.mathsolver.fragments.determinantFragments.Determinant4D;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class DeterminantFragment extends Fragment {

@@ -1,4 +1,4 @@
-package com.example.mathsolver;
+package com.avirup.mathsolver;
 
 import static org.junit.Assert.assertEquals;
 

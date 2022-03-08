@@ -1,4 +1,4 @@
-package com.example.mathsolver;
+package com.avirup.mathsolver;
 
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -14,9 +14,9 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.example.mathsolver.fragments.DeterminantFragment;
-import com.example.mathsolver.fragments.HomeFragment;
-import com.example.mathsolver.fragments.LinearEquationFragment;
+import com.avirup.mathsolver.fragments.DeterminantFragment;
+import com.avirup.mathsolver.fragments.HomeFragment;
+import com.avirup.mathsolver.fragments.LinearEquationFragment;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {

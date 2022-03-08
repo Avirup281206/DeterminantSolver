@@ -1,4 +1,4 @@
-package com.example.mathsolver;
+package com.avirup.mathsolver;
 
 import org.junit.Test;
 
