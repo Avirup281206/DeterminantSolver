@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.avirup.mathsolver">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -16,9 +15,9 @@
 
         <activity
             android:name="com.avirup.mathsolver.MainActivity"
-            android:theme="@style/Theme.MathSolver.NoActionBar"
             android:exported="true"
             android:screenOrientation="portrait"
+            android:theme="@style/Theme.MathSolver.NoActionBar"
             android:windowSoftInputMode="adjustPan"
             tools:ignore="LockedOrientationActivity">
 
@@ -30,7 +29,7 @@
 
         </activity>
 
-        <profileable android:shell="true"/>
+        <profileable android:shell="true" />
 
     </application>
 

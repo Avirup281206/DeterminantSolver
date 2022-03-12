@@ -1,5 +1,6 @@
 package com.avirup.mathsolver;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.avirup.mathsolver.fragments.DeterminantFragment;
 import com.avirup.mathsolver.fragments.HomeFragment;
 import com.avirup.mathsolver.fragments.LinearEquationFragment;
+import com.avirup.mathsolver.util.Utils;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -59,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         else super.onBackPressed();
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
@@ -68,21 +71,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_linear_equation -> getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new LinearEquationFragment()).commit();
             case R.id.nav_about -> {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setMessage(R.string.info);
+                builder.setMessage(Utils.info);
                 builder.setTitle("About");
-                builder.setCancelable(false);
-                builder.setNegativeButton("Ok", (dialog, which) -> dialog.cancel());
+                builder.setCancelable(true);
+                builder.setPositiveButton("Ok", (dialog, which) -> dialog.cancel());
                 AlertDialog alertDialog = builder.create();
                 alertDialog.show();
             }
             case R.id.nav_share -> {
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, """
-                        Try out this math solver
-                        https://github.com/Avirup281206/math-solver-mobile/releases/download/v0.4.1/Math.Solver.apk""");
+                sendIntent.putExtra(Intent.EXTRA_TEXT, Utils.share_string);
                 sendIntent.setType("text/plain");
-                Intent shareIntent = Intent.createChooser(sendIntent, "Share via");
+                Intent shareIntent = Intent.createChooser(sendIntent, "Share this app");
                 startActivity(shareIntent);
             }
         }

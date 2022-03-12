@@ -48,5 +48,4 @@ public class DeterminantFragment extends Fragment {
     }
 
 
-
 }

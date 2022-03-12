@@ -3,13 +3,21 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('F:\\Avirup.jks')
+            storePassword 'Avirup281206'
+            keyAlias 'key0'
+            keyPassword 'Avirup281206'
+        }
+    }
     compileSdk 32
 
     defaultConfig {
         applicationId "com.avirup.mathsolver"
         minSdk 21
         targetSdk 33
-        versionCode 1
+        versionCode 1 + 4 * 10 + 0 * 100
         versionName "0.4.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
