@@ -1,5 +1,7 @@
 package com.avirup.mathsolver.fragments;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,6 +46,8 @@ public class DeterminantFragment extends Fragment {
             getParentFragmentManager().beginTransaction().replace(R.id.fragment_container_determinant, selectedFragment).commit();
             return true;
         });
+
+        bottomNavigationView.setBackground(new ColorDrawable(Color.WHITE));
 
     }
 
